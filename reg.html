@@ -1,59 +1,31 @@
 <html>
   <head>
-    <script language="javascript">
-     <!--
-     function show(userid) {
-	 document.images['myImage'].src = "/cgi-bin/regimage?userid="+userid;
-	 document.regform.g.value="看不到数字请点我";
-	 document.regform.g.disabled=false;
-     }//-->
-    </script>
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <title>五色土-新用户注册</title>
     <style type="text/css">
-     body {
-       font-family: Verdana;}
-     .top {
-       margin-left: 6px;
-       margin-right: 6px;
-     }
-     .topic {
-       font-size: 22px;
-       padding: 4px 4px 4px 4px;
-     }
-     .title {
-       background-image: url(images/grass_lightest.jpg);
-     }
+     #headline {display: block; }
+     #content {display: block; width: 720px; margin: 20px 60px 0 60px;}
+     #regform {display: block; float: left; margin-left: 64px; width: 400px; font-size: 16px;}
+     #declaration {display: block; float: right; width: 220px; font-size: 14px;}
+     #submit {text-align: center;}
+     .title {}
+     .topic {font-size: 22px;
+       padding: 4px 4px 4px 4px;}
      .caution {font-size: 14px;}
-     .content {
-       margin-left: 32px;
-       margin-right: 32px;
-     }
-     .prolog {
-       font-size: 13px;
-     }
-     #regform .left {
-       text-align: right;
-       font-size: 13px;
-       white-space: nowrap;
-       padding-right: 6px;
-     }
-     #regform .right {
-       padding-top: 4px;
-       padding-left: 6px;
-       padding-bottom: 4px;
-     }
-     .submit {text-align: center;}
-     input[type|="text"]:focus,
-     input[type|="password"]:focus,
-     textarea:focus {background: #FF9;}
-     .asterisk {font-size: 13px; color: #900;}
-     b.comment {
-       font-size: 12px;
-       color: #030;
-     }
+     .donot {text-decoration: underline; line-height: 20px; text-shadow: 0 0 4px silver;}
+     .form_title {font-weight: bold;}
+     .required {color: red; font-weight: bold; font-size: 80%;}
+     .direction {color: #A9A9A9; font-size: 75%; line-height: 19px;}
+     .first_col {float: left; clear: left;}
+     .second_col {float: right; clear: right;}
+     .upon_the_two_col, .under_the_two_col {clear: both;}
+     label {display: block; text-align: left;}
+     ol {text-align: left;}
+     body {text-align: center; width: 900px;font-family: Verdana;}
     </style>
   </head>
   <body>
-    <div class="top">
+    <div id="headline">
       <div class="title">
 	<hr>
 	<b class="topic">五色土</b>
@@ -62,126 +34,136 @@
 	<hr>
       </div>
       <b class="caution">欢迎加入本站^_^以下资料请如实填写，带（</b>
-      <b class="asterisk">*</b>
+      <b class="required">*</b>
       <b class="caution">）号的项目为必填内容。</b>
     </div>
-    <div class="content">
-      <div class="prolog">
-	<ol>
-	  <li>请勿以党和国家领导人或其他名人的真实姓名、字号、艺名、笔名注册；
-	    <li>请勿以国家机构或其他机构的名称注册；
-	      <li>请勿注册和其他网友之名相近、相仿的名字；
-	        <li>请勿注册不文明、不健康之代号；
-	          <li>请勿注册易产生歧义、引起他人误解之代号；
-	</ol>
+    <div id="content">
+      <div id="declaration">
+        <ol>
+	  <li class="donot">请勿以党和国家领导人或其他名人的真实姓名、字号、艺名、笔名注册；
+	    <li class="donot">请勿以国家机构或其他机构的名称注册；
+	      <li class="donot">请勿注册和其他网友之名相近、相仿的名字；
+	        <li class="donot">请勿注册不文明、不健康之代号；
+	          <li class="donot">请勿注册易产生歧义、引起他人误解之代号；
+        </ol>
       </div>
-      <div class="form">
-	<form id="regform" method="post" action="bbsdoreg">
-	  <table cellspacing="0">
-	    <tbody>
-	      <tr class="required">
-		<td class="left">
-		  <b>请输入帐号：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="text" name="userid" size="12" maxlength="12" value="3-12字符"
-			 style="width: 128px; color: rgb(128, 128, 128); font-style: italic;"
-			 onBlur=show(document.regform.userid.value);return false>
-		  <b class="comment">（3-12字符，必须全为英文字母或标准汉字。帐号是您的BBS登录凭证，申请后无法再行修改。）</b></td></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>请输入密码：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="password" name="pass1" size="31" maxlength="31">
-		  <b class="comment">（有效长度31位。请保护好您的密码。）</b></td></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>请确认密码：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="password" name="pass2" size="31" maxlength="31">
-		  <b class="comment">（有效长度31位。）</b></td></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>请输入昵称：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="text" name="username" value="2~30个字符，中英皆可" size="20" maxlength="39">
-		  <b class="comment">（2-30字符，中英文不限。登陆后可自行修改，类似心情短语。）</b></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>学校系级或者公司单位：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="text" name="address" size="40">
-		  <b class="comment">（至少8个汉字，学校系级请具体到班级，单位请具体到部门。例：系级：中国农大xx学院xx专业xx班；单位：中国农大校团委宣传部。）</b></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>所在学院及学号：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <select name="college">
-		    <option>农学与生物科技学院</option>
-		    <option>生物学院</option>
-		    <option>动物科技学院</option>
-		    <option>动物医学院</option>
-		    <option>食品科学与营养工程学院</option>
-		    <option>资源与环境学院</option>
-		    <option>信息与电气工程学院</option>
-		    <option>工学院</option>
-		    <option>水利与土木工程学院</option>
-		    <option>理学院</option>
-		    <option>经济管理学院</option>
-		    <option>人文与发展学院（公共管理学院）</option>
-		    <option>国际学院</option>
-		    <option>继续教育学院（远程教育）</option>
-		    <option>体育与艺术教学部</option>
-		    <option>烟台研究院</option>
-		    <option>北京建设大学</option>
-		  </select>
-		</td>
-	      </tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>请输入您的真实姓名：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input type="text" name="realname" size="20">
-		  <b class="comment">（请用中文, 至少2个汉字）</b></td></tr>
-	      <tr class="required">
-		<td class="left">
-		  <input type="button" name=g value="请先填写代号"
-			 disabled=true
-			 onClick=show(document.regform.userid.value);
-			 return false><br></td>
-		  <td></td>
-		  <td class="right">
-		    <img src="/cgi-bin/regimage" name="myImage"></td></tr>
-	      <tr class="required">
-		<td class="left">
-		  <b>请输入上面的数字：</b></td>
-		<td class="asterisk"><b>*</b></td>
-		<td class="right">
-		  <input name="regpass" size="10" maxlength="10">
-		  <b class="comment">如果显示为红x，请重新填写一遍帐号和密码，即可出现。</b></tr>
-	    </tbody>
-	  </table>
-	  <hr>
-	  <div class="submit">
+      <div id="regform">
+        <div id="upon_the_two_col">
+	  <p>
+	    <label id="useridLabel" for="userid">
+	      <span class="form_title">帐号</span>
+	      <span class="required">*</span>
+	      <span class="direction">BBS登录凭证，申请后无法再行修改</span>
+	    </label>
+	    <input id="userid" type="text" name="userid" size="12" maxlength="12"
+	           style="width:400px;"
+	           onBlur="show(document.regform.userid.value); return false;" />
+	  </p>
+        </div>
+        <div class="two_col" id="password">
+	  <div class="first_col">
+	    <p>
+	      <label id="pass1Label" for="pass1">
+	        <span class="form_title">密码</span>
+	        <span class="required">*</span>
+	        <span class="direction">最多31位</span>
+	      </label>
+	      <input id="pass1" type="password" name="pass1" size="31" maxlength="31"
+	             style="width: 194px;">
+	    </p>
+	  </div>
+	  <div class="second_col">
+	    <p>
+	      <label id="pass2Label" for="pass2">
+	        <span class="form_title">确认密码</span>
+	        <span class="required">*</span>
+	        <span class="direction">再次键入密码</span>
+	      </label>
+	      <input id="pass2" type="password" name="pass2" size="31" maxlength="31"
+	             style="width: 194px;">
+	    </p>
+	  </div>
+        </div>
+        <div id="under_the_two_col">
+	  <p>
+	    <label id="usernameLabel" for="username">
+	      <span class="form_title">你的昵称</span>
+	      <span class="required">*</span>
+	      <span class="direction">登陆后可自行修改，类似心情短语</span>
+	    </label>
+	    <input id="username" type="text" name="username" size="20" maxlength="39"
+	           style="width: 400px;">
+	  </p>
+        </div>
+        <p>
+          <label class="addressLabel" for="address">
+	    <span class="form_title">所在学院</span>
+	    <span class="required">*</span>
+          </label>
+          <select id="address" name="address" style="width: 400px;">
+	    <option style="color: #A9A9A9;">请选择所在学院...</option>
+	    <option>农学与生物科技学院</option>
+	    <option>生物学院</option>
+	    <option>动物科技学院</option>
+	    <option>动物医学院</option>
+	    <option>食品科学与营养工程学院</option>
+	    <option>资源与环境学院</option>
+	    <option>信息与电气工程学院</option>
+	    <option>工学院</option>
+	    <option>水利与土木工程学院</option>
+	    <option>理学院</option>
+	    <option>经济管理学院</option>
+	    <option>人文与发展学院（公共管理学院）</option>
+	    <option>国际学院</option>
+	    <option>继续教育学院（远程教育）</option>
+	    <option>体育与艺术教学部</option>
+	    <option>烟台研究院</option>
+	    <option>北京建设大学</option>
+          </select>
+        </p>
+        <p class="upon_the_two_col">
+          <label id="realnameLabel" for="realname">
+	    <span class="form_title">真实姓名</span>
+	    <span class="required">*</span>
+	    <span class="direction">中文，至少2个汉字</span>
+          </label>
+          <input id="realname" type="text" name="realname" size="20"
+                 style="width:400px;">
+        </p>
+        <div class="two_col">
+	  <div class="first_col">
+	    <p>
+	      <div style="text-align: left;">
+	        <input type="button" name=g value="请先填写代号" disabled=true
+	               onClick="show(document.regform.userid.value); return false;">
+	      </div><br />
+	      <img src="/cgi-bin/regimage" name="myImage" style="width: 194px; height: 24px;">
+	    </p>
+	  </div>
+	  <div class="second_col">
+	    <p>
+	      <label id="regpassLabel" for="regpass">
+	        <span>左边的数字是？</span>
+	        <span class="required">*</span>
+	        <span class="direction">显示为<span style="color: red; font-weight: bold;">×</span>？重<br />填一次表格试试看</span>
+	      </label>
+	      <input id="regpass" type="text" size="10" maxlength="10" style="width: 194px;"><br />
+	    </p>
+	  </div>
+          <hr id="bottom" class="under_the_two_col">
+          <div id="submit">
 	    <input type="button" value="提交表格"
-		   onclick="this.value='注册单提交中，请稍候...';
-			    this.disabled=true;
-			    regform.submit();" >
+	           onclick="this.value='注册单提交中，请稍候...';
+	                    this.disabled=true;
+	                    regform.submit();" >
 	    <input type="reset" value="重新填写">
 	    <input type="button" value="查看帮助"
-		   onclick="javascript:{
-			    open('/reghelp.html','winreghelp',
-			    'width=600,height=460,resizeable=yes,scrollbars=yes');
-			    return false;}">
-	  </div>
-	</form>
+	           onclick="javascript:{
+	                    open('/reghelp.html','winreghelp',
+	                    'width=600,height=460,resizeable=yes,scrollbars=yes');
+	                    return false;}">
+          </div>
+        </div>
       </div>
-    </div>
   </body>
 </html>
