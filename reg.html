@@ -11,39 +11,40 @@
     <style type="text/css">
      body {
        font-family: Verdana;}
-     div.top {
+     .top {
        margin-left: 6px;
        margin-right: 6px;
      }
-     div.top b.topic {
+     .topic {
        font-size: 22px;
        padding: 4px 4px 4px 4px;
      }
-     div.title {
+     .title {
        background-image: url(images/grass_lightest.jpg);
      }
-     div.top b.caution {font-size: 14px;}
-     div.content {
+     .caution {font-size: 14px;}
+     .content {
        margin-left: 32px;
        margin-right: 32px;
      }
-     div.content div.prolog {
+     .prolog {
        font-size: 13px;
      }
-     #regform td.left {
+     #regform .left {
        text-align: right;
        font-size: 13px;
        white-space: nowrap;
        padding-right: 6px;
      }
-     #regform td.right {
+     #regform .right {
        padding-top: 4px;
        padding-left: 6px;
        padding-bottom: 4px;
      }
-     div.submit {text-align: center;}
-     #regform td.right {}
-     #regform table input:focus, textarea:focus {background: #FF9;}
+     .submit {text-align: center;}
+     input[type|="text"]:focus,
+     input[type|="password"]:focus,
+     textarea:focus {background: #FF9;}
      .asterisk {font-size: 13px; color: #900;}
      b.comment {
        font-size: 12px;
@@ -83,7 +84,8 @@
 		  <b>请输入帐号：</b></td>
 		<td class="asterisk"><b>*</b></td>
 		<td class="right">
-		  <input name="userid" size="12" maxlength="12"
+		  <input type="text" name="userid" size="12" maxlength="12" value="3-12字符"
+			 style="width: 128px; color: rgb(128, 128, 128); font-style: italic;"
 			 onBlur=show(document.regform.userid.value);return false>
 		  <b class="comment">（3-12字符，必须全为英文字母或标准汉字。帐号是您的BBS登录凭证，申请后无法再行修改。）</b></td></tr>
 	      <tr class="required">
@@ -105,40 +107,48 @@
 		  <b>请输入昵称：</b></td>
 		<td class="asterisk"><b>*</b></td>
 		<td class="right">
-		  <input name="username" size="20" maxlength="39">
+		  <input type="text" name="username" value="2~30个字符，中英皆可" size="20" maxlength="39">
 		  <b class="comment">（2-30字符，中英文不限。登陆后可自行修改，类似心情短语。）</b></tr>
 	      <tr class="required">
 		<td class="left">
 		  <b>学校系级或者公司单位：</b></td>
 		<td class="asterisk"><b>*</b></td>
 		<td class="right">
-		  <input name="address" size="40">
+		  <input type="text" name="address" size="40">
 		  <b class="comment">（至少8个汉字，学校系级请具体到班级，单位请具体到部门。例：系级：中国农大xx学院xx专业xx班；单位：中国农大校团委宣传部。）</b></tr>
-	      <tr class="optional">
+	      <tr class="required">
 		<td class="left">
-		  <b>E-mail地址（可选）：</b></td>
-		<td></td>
+		  <b>所在学院及学号：</b></td>
+		<td class="asterisk"><b>*</b></td>
 		<td class="right">
-		  <input name="email" size="40"></td></tr>
-	      <tr class="optional">
-		<td class="left">
-		  <b>联络电话（可选）：</b></td>
-		<td></td>
-		<td class="right">
-		  <input name="phone" size="40" ></td></tr>
+		  <select name="college">
+		    <option>农学与生物科技学院</option>
+		    <option>生物学院</option>
+		    <option>动物科技学院</option>
+		    <option>动物医学院</option>
+		    <option>食品科学与营养工程学院</option>
+		    <option>资源与环境学院</option>
+		    <option>信息与电气工程学院</option>
+		    <option>工学院</option>
+		    <option>水利与土木工程学院</option>
+		    <option>理学院</option>
+		    <option>经济管理学院</option>
+		    <option>人文与发展学院（公共管理学院）</option>
+		    <option>国际学院</option>
+		    <option>继续教育学院（远程教育）</option>
+		    <option>体育与艺术教学部</option>
+		    <option>烟台研究院</option>
+		    <option>北京建设大学</option>
+		  </select>
+		</td>
+	      </tr>
 	      <tr class="required">
 		<td class="left">
 		  <b>请输入您的真实姓名：</b></td>
 		<td class="asterisk"><b>*</b></td>
 		<td class="right">
-		  <input name="realname" size="20">
+		  <input type="text" name="realname" size="20">
 		  <b class="comment">（请用中文, 至少2个汉字）</b></td></tr>
-	      <tr class="optional">
-		<td class="left">
-		  <b>上站留言(可选)：</b></td>
-		<td></td>
-		<td class="right">
-		  <textarea name="words" rows="3" cols="40" wrap="virutal"></textarea></tr>
 	      <tr class="required">
 		<td class="left">
 		  <input type="button" name=g value="请先填写代号"
