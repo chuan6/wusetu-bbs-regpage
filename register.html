@@ -1,0 +1,89 @@
+<html>
+<head><meta http-equiv='Content-Type' content='text/html; charset=gb2312'>
+<link rel=stylesheet type=text/css href='/5bbsx.css?0'>
+<script src=/function.js?0></script>
+<script language="JavaScript">
+  <!--
+     function show(userid) {
+     document.images['myImage'].src = "/cgi-bin/regimage?userid="+userid;
+     document.regform.g.value="看不到数字请点我";
+     document.regform.g.disabled=false;
+     }//-->
+</script>
+<body>
+  <nobr>
+    <center>五色土 -- 新用户注册
+      <hr>
+      <font color=green>欢迎加入本站. 以下资料请如实填写. 带*号的项目为必填内容.</font>
+    </center><br>
+    1、请勿以党和国家领导人或其他名人的真实姓名、字号、艺名、笔名注册； <br>
+    2、请勿以国家机构或其他机构的名称注册； <br>
+    3、请勿注册和其他网友之名相近、相仿的名字； <br>
+    4、请勿注册不文明、不健康之代号； <br>
+    5、请勿注册易产生歧义、引起他人误解之代号； <br>
+    <center>
+      <form name=regform method=post action=bbsdoreg>
+	<table width=100%>
+	  <tr>
+	    <td align=right>*请输入帐号:
+	    <td align=left><input name=userid
+				  size=12
+				  maxlength=12
+				  onBlur=show(document.regform.userid.value);return false>
+	      (3-12字符, 必须全为英文字母或标准汉字。帐号是您的BBS登录凭证，申请后无法再行修改。)</tr>
+	  <tr>
+	    <td align=right>*请输入密码:
+	    <td align=left><input type=password name=pass1 size=31 maxlength=31>
+	      (有效长度31位。请保护好您的密码。)</tr>
+	  <tr>
+	    <td align=right>*请确认密码:
+	    <td align=left><input type=password name=pass2 size=31 maxlength=31>
+	      (有效长度31位)</tr>
+	  <tr>
+	    <td align=right>*请输入昵称:
+	    <td align=left><input name=username size=20 maxlength=39>
+	      (2-30字符, 中英文不限。登陆后可自行修改，类似心情短语。)</tr>
+	  <tr>
+	    <td align=right>*学校系级或者公司单位:
+	    <td align=left><input name=address size=40>
+	      (至少8个汉字，学校系级请具体到班级，单位请具体到部门。例：系级：中国农大xx学
+	      院xx专业xx班；单位：中国农大校团委宣传部。)</tr>
+	  <tr>
+	    <td align=right>email地址(可选):
+	    <td align=left><input name=email size=40></tr>
+	  <tr>
+	    <td align=right>联络电话(可选):
+	    <td align=left><input name=phone size=40></tr>
+	  <tr>
+	    <td align=right>*请输入您的真实姓名:
+	    <td align=left><input name=realname size=20>
+	      (请用中文, 至少2个汉字)</tr>
+	  <tr>
+	    <td align=right>上站留言(可选):
+	    <td align=left>
+	      <textarea name=words rows=3 cols=40 wrap=virutal></textarea></tr>
+	  <tr>
+	    <td align=right>
+	      <input type="button" name=g value="请先填写代号"
+		     disabled=true
+		     onClick=show(document.regform.userid.value);
+		     return false><br>
+	    <td align=left><img src="/cgi-bin/regimage" name="myImage"></tr>
+	  <tr>
+	    <td align=right>*请输入上面的数字:
+	    <td align=left><input name=regpass size=10 maxlength=10>
+	      如果显示为红x，请重新填写一遍帐号和密码，即可出现。</tr>
+	</table><br>
+	<hr>
+	<input type=button value=提交表格
+	       onclick="this.value='注册单提交中，请稍候...';
+			this.disabled=true;
+			regform.submit();" >
+	<input type=reset value=重新填写>
+	<input type=button value=查看帮助
+	       onclick="javascript:{
+			open('/reghelp.html','winreghelp',
+			'width=600,height=460,resizeable=yes,scrollbars=yes');
+			return false;}">
+      </form>
+    </center>
