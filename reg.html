@@ -9,26 +9,21 @@
      }//-->
     </script>
     <style type="text/css">
-     #content {width: 480px; margin: 20px 210px 0 210px;}
-     .topic {font-size: 22px; font-weight: bold;}
-     .caution {font-size: 15px;}
+     #content {width: 480px; margin: 20px 120px 0 120px;}
+     .caution {font-size: 12px; font-weight: bolder;}
      .donot {text-align: left; font-size: 13px;}
-     .itemHead {text-align: right; font-size: 16px; font-weight: bold;}
+     .itemHead {text-align: right; padding-right: 4px; font-size: 14px; font-weight: bold;}
      .required {font-size: 12px; font-weight: bold; color: red;}
-     .direction {text-align: right; font-size: 75%; color: #A9A9A9;}
-     input[type|="text"], input[type|="password"], select {width: 240px; height: 22px; border: 2px solid #A9A9A9;}
+     .direction {text-align: right; font-size: 70%; color: #A9A9A9;}
+     input[type|="text"], input[type|="password"], select {margin-left: 12px; width: 230px; height: 25px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;}
      input[type|="text"]:focus, input[type|="password"]:focus, select:focus {background-color: #FFC;}
-     body {text-align: center; width: 900px; margin: 0 auto; font-family: Verdana;}
+     body {text-align: center; width: 720px; margin: 0 auto; font-family: Verdana;}
     </style>
   </head>
   <body>
     <div id="headline">
       <div id="title">
-	<hr>
-	<span class="topic">五色土</span>
-	<img class="_of" src="images/_of.jpg">
-	<span class="topic">新用户注册</span>
-	<hr>
+	<img id="topic" src="images/topic.png">
       </div>
       <span class="caution">欢迎加入本站^_^以下资料请如实填写，带（</span>
       <span class="required">*</span>
@@ -57,7 +52,7 @@
 		</td>
 		<td>
 		  <input type="text" name="userid" size="12" maxlength="12"
-		         style="width: 240px;"
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;"
 		         onBlur="show(document.regform.userid.value); return false;">
 		</td>
 	      </tr>
@@ -78,14 +73,14 @@
 		</td>
 		<td>
 		  <input type="password" name="pass1" size="31" maxlength="31"
-		         style="width: 240px;">
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 		</td>
 	      </tr>
 	      <tr>
 		<td></td>
 		<td></td>
 		<td class="direction">
-		  <span>有效长度31位。</span>
+		  <span>有效长度31位</span>
 		</td>
 	      </tr>
 
@@ -98,7 +93,7 @@
 		</td>
 		<td>
 		  <input type="password" name="pass2" size="31" maxlength="31"
-		         style="width: 240px;">
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 		</td>
 	      </tr>
 	      <tr>
@@ -118,7 +113,7 @@
 		</td>
 		<td>
 		  <input type="text" name="username" size="20" maxlength="39"
-		         style="width: 240px;">
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 		</td>
 	      </tr>
 	      <tr>
@@ -138,7 +133,7 @@
 		</td>
 		<td>
 		  <select name="address">
-		    <option style="width: 240px; color: #A9A9A9;">请选择所在学院...</option>
+		    <option style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">请选择所在学院...</option>
 		    <option>农学与生物科技学院</option>
 		    <option>生物学院</option>
 		    <option>动物科技学院</option>
@@ -176,7 +171,7 @@
 		</td>
 		<td>
 		  <input type="text" name="realname" size="20"
-		         style="width: 240px;">
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 		</td>
 	      </tr>
 	      <tr>
@@ -214,7 +209,7 @@
 		</td>
 		<td>
 		  <input type="text" name="regpass" size="10" maxlength="10"
-		         style="width: 240px;">
+		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	      </tr>
 	    </tbody>
 	  </table>
