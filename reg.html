@@ -4,8 +4,8 @@
     <title>五色土-新用户注册</title>
     <style type="text/css">
      #headline {display: block; }
-     #content {display: block; width: 720px; margin: 20px 60px 0 60px;}
-     #regform {display: block; float: left; margin-left: 64px; width: 400px; font-size: 16px;}
+     #content {display: block; width: 720px; margin: 20px 90px 0 90px;}
+     #regform {display: block; float: left; margin-left: 64px; width: 356px; font-size: 16px;}
      #declaration {display: block; float: right; width: 220px; font-size: 14px;}
      #submit {text-align: center;}
      .title {}
@@ -22,6 +22,7 @@
      label {display: block; text-align: left;}
      ol {text-align: left;}
      body {text-align: center; width: 900px;font-family: Verdana;}
+     input[type|="text"], input[type|="password"], select {border: 1px solid #808080; background-color: #FFC;}
     </style>
   </head>
   <body>
@@ -56,7 +57,7 @@
 	      <span class="direction">BBS登录凭证，申请后无法再行修改</span>
 	    </label>
 	    <input id="userid" type="text" name="userid" size="12" maxlength="12"
-	           style="width:400px;"
+	           style="width:356px;"
 	           onBlur="show(document.regform.userid.value); return false;" />
 	  </p>
         </div>
@@ -69,7 +70,7 @@
 	        <span class="direction">最多31位</span>
 	      </label>
 	      <input id="pass1" type="password" name="pass1" size="31" maxlength="31"
-	             style="width: 194px;">
+	             style="width: 172px;">
 	    </p>
 	  </div>
 	  <div class="second_col">
@@ -80,7 +81,7 @@
 	        <span class="direction">再次键入密码</span>
 	      </label>
 	      <input id="pass2" type="password" name="pass2" size="31" maxlength="31"
-	             style="width: 194px;">
+	             style="width: 172px;">
 	    </p>
 	  </div>
         </div>
@@ -92,7 +93,7 @@
 	      <span class="direction">登陆后可自行修改，类似心情短语</span>
 	    </label>
 	    <input id="username" type="text" name="username" size="20" maxlength="39"
-	           style="width: 400px;">
+	           style="width: 356px;">
 	  </p>
         </div>
         <p>
@@ -100,7 +101,7 @@
 	    <span class="form_title">所在学院</span>
 	    <span class="required">*</span>
           </label>
-          <select id="address" name="address" style="width: 400px;">
+          <select id="address" name="address" style="width: 356px;">
 	    <option style="color: #A9A9A9;">请选择所在学院...</option>
 	    <option>农学与生物科技学院</option>
 	    <option>生物学院</option>
@@ -128,7 +129,7 @@
 	    <span class="direction">中文，至少2个汉字</span>
           </label>
           <input id="realname" type="text" name="realname" size="20"
-                 style="width:400px;">
+                 style="width:356px;">
         </p>
         <div class="two_col">
 	  <div class="first_col">
@@ -137,17 +138,17 @@
 	        <input type="button" name=g value="请先填写代号" disabled=true
 	               onClick="show(document.regform.userid.value); return false;">
 	      </div><br />
-	      <img src="/cgi-bin/regimage" name="myImage" style="width: 194px; height: 24px;">
+	      <img src="/cgi-bin/regimage" name="myImage" style="width: 175px; height: 24px;">
 	    </p>
 	  </div>
 	  <div class="second_col">
 	    <p>
 	      <label id="regpassLabel" for="regpass">
 	        <span>左边的数字是？</span>
-	        <span class="required">*</span>
-	        <span class="direction">显示为<span style="color: red; font-weight: bold;">×</span>？重<br />填一次表格试试看</span>
+	        <span class="required">*</span><br />
+	        <span class="direction">显示为<span style="color: red; font-weight: bold;">×</span>？重填一次表格试试看</span>
 	      </label>
-	      <input id="regpass" type="text" size="10" maxlength="10" style="width: 194px;"><br />
+	      <input id="regpass" type="text" size="10" maxlength="10" style="width: 175px;"><br />
 	    </p>
 	  </div>
           <hr id="bottom" class="under_the_two_col">
