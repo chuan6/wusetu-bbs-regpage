@@ -1,23 +1,52 @@
 <html>
   <head>
     <script language="javascript">
-     <!--
-     function show(userid) {
+      <!--
+	 function show(userid) {
 	 document.images['myImage'].src = "/cgi-bin/regimage?userid="+userid;
 	 document.regform.g.value="看不到数字请点我";
 	 document.regform.g.disabled=false;
-     }//-->
+	 }//-->
     </script>
     <style type="text/css">
-     #content {width: 480px; margin: 20px 120px 0 120px;}
-     .caution {font-size: 12px; font-weight: bolder;}
-     .donot {text-align: left; font-size: 13px;}
-     .itemHead {text-align: right; padding-right: 4px; font-size: 14px; font-weight: bold;}
-     .required {font-size: 12px; font-weight: bold; color: red;}
-     .direction {text-align: right; font-size: 70%; color: #A9A9A9;}
-     input[type|="text"], input[type|="password"], select {margin-left: 12px; width: 230px; height: 25px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;}
-     input[type|="text"]:focus, input[type|="password"]:focus, select:focus {background-color: #FFC;}
-     body {text-align: center; width: 720px; margin: 0 auto; font-family: Verdana;}
+      #content {
+        width: 480px;
+        margin: 20px 120px 0 120px;}
+      .caution {
+        font-size: 12px;
+        font-weight: bolder;}
+      .donot {
+        text-align: left;
+        font-size: 13px;}
+      .itemHead {
+        text-align: right;
+        padding-right: 4px;
+        font-size: 14px;
+        font-weight: bold;}
+      .required {
+        font-size: 12px;
+        font-weight: bold;
+        color: red;}
+      .direction {
+        text-align: right;
+        font-size: 70%;
+        color: #A9A9A9;}
+      input[type|="text"], input[type|="password"], select {
+        margin-left: 12px;
+        width: 230px;
+        height: 25px;
+        border: 1px solid #A9A9A9;
+        padding: 3px 4px 2px 4px;
+        font-family: Verdana;
+        font-size: 14px;}
+      input[type|="text"]:focus,
+      input[type|="password"]:focus,
+      select:focus {background-color: #FFC;}
+      body {
+        text-align: center;
+        width: 720px;
+        margin: 0 auto;
+        font-family: Verdana;}
     </style>
   </head>
   <body>
@@ -25,18 +54,18 @@
       <div id="title">
 	<img id="topic" src="images/topic.png">
       </div>
-      <span class="caution">欢迎加入本站^_^以下资料请如实填写，带（</span>
+      <span class="caution">欢迎加入本站^_^ 请如实填写以下资料！带（</span>
       <span class="required">*</span>
-      <span class="caution">）号的项目为必填内容。</span>
+      <span class="caution">）号的项目为必填内容哦</span>
     </div>
     <div id="content">
       <div id="declaration">
 	<ol>
 	  <li class="donot">请勿以党和国家领导人或其他名人的真实姓名、字号、艺名、笔名注册；
-	    <li class="donot">请勿以国家机构或其他机构的名称注册；
-	      <li class="donot">请勿注册和其他网友之名相近、相仿的名字；
-	        <li class="donot">请勿注册不文明、不健康之代号；
-	          <li class="donot">请勿注册易产生歧义、引起他人误解之代号；
+	  <li class="donot">请勿以国家机构或其他机构的名称注册；
+	  <li class="donot">请勿注册和其他网友之名相近、相仿的名字；
+	  <li class="donot">请勿注册不文明、不健康之代号；
+	  <li class="donot">请勿注册易产生歧义、引起他人误解之代号；
 	</ol>
       </div>
       <div id="form">
@@ -44,93 +73,45 @@
 	  <table cellspacing="0">
 	    <tbody>
 	      <tr>
-		<td class="itemHead">
-		  <span>请输入帐号：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">你的帐号：
+		<td class="required">*
 		<td>
 		  <input type="text" name="userid" size="12" maxlength="12"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;"
-		         onBlur="show(document.regform.userid.value); return false;">
-		</td>
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;"
+		  onBlur="show(document.regform.userid.value); return false;">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>BBS登录凭证，申请后无法再行修改</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">BBS登录凭证，申请后无法再行修改
 
 	      <tr>
-		<td class="itemHead">
-		  <span>密码：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">密码：
+		<td class="required">*
 		<td>
 		  <input type="password" name="pass1" size="31" maxlength="31"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
-		</td>
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>有效长度31位</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">有效长度31位
 
 	      <tr>
-		<td class="itemHead">
-		  <span>确认密码：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">确认密码：
+		<td class="required">*
 		<td>
 		  <input type="password" name="pass2" size="31" maxlength="31"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
-		</td>
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>再次键入密码</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">再次键入密码
 
 	      <tr>
-		<td class="itemHead">
-		  <span>你的昵称：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">你的昵称：
+		<td class="required">*
 		<td>
 		  <input type="text" name="username" size="20" maxlength="39"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
-		</td>
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>登陆后可自行修改，类似心情短语</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">登陆后可自行修改，类似心情短语
 
 	      <tr>
-		<td class="itemHead">
-		  <span>所在学院及学号：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">所在学院：
+		<td class="required">*
 		<td>
 		  <select name="address">
 		    <option style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">请选择所在学院...</option>
@@ -152,65 +133,32 @@
 		    <option>烟台研究院</option>
 		    <option>北京建设大学</option>
 		  </select>
-		</td>
-	      </tr>
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>选其一</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">选其一
 
 	      <tr>
-		<td class="itemHead">
-		  <span>真实姓名：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">真实姓名：
+		<td class="required">*
 		<td>
 		  <input type="text" name="realname" size="20"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
-		</td>
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td class="direction">
-		  <span>中文，至少2个汉字</span>
-		</td>
-	      </tr>
+		<td><td><td class="direction">中文，至少2个汉字
 
 	      <tr>
 		<td class="itemHead">
 		  <input type="button" name="g" value="请先填写代号" disabled=true
-		         onClick="show(document.regform.userid.value); return false;">
-		</td>
-		<td></td>
-		<td>
-		  <img src="/cgi-bin/regimage" name="myImage">
-		</td>
-	      </tr>
+		  onClick="show(document.regform.userid.value); return false;">
+		<td><td><img src="/cgi-bin/regimage" name="myImage">
 	      <tr>
-		<td></td>
-		<td></td>
-		<td  class="direction">
-		  <span>显示为<span style="color: red; font-weight: bold;">×</span>？重填一次表格试试看</span>
-		</td>
-	      </tr>
+		<td><td><td  class="direction">显示为<span style="color: red; font-weight: bold;"> X</span>？重填一次表格试试看
 
 	      <tr>
-		<td class="itemHead">
-		  <span>请输入上面的数字：</span>
-		</td>
-		<td>
-		  <span class="required">*</span>
-		</td>
+		<td class="itemHead">输入上面的数字是：
+		<td class="required">*
 		<td>
 		  <input type="text" name="regpass" size="10" maxlength="10"
-		         style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
-	      </tr>
+		  style="margin-left: 12px; width: 230px; height: 24px; border: 1px solid #A9A9A9; padding: 3px 4px 2px 4px; font-family: Verdana; font-size: 14px;">
 	    </tbody>
 	  </table>
 	  <hr>
