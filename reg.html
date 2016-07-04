@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <script language="javascript">
+     <!--
+     function show(userid) {
+	 document.images['myImage'].src = "/cgi-bin/regimage?userid="+userid;
+	 document.regform.g.value="看不到数字请点我";
+	 document.regform.g.disabled=false;
+     }//-->
+    </script>
+    <style type="text/css">
+     body {
+       background-image: url(images/grass_lightest.jpg);
+       font-family: Verdana;}
+     div.top {
+       text-align: center;
+       font-size: 24px;
+       margin-left: 32px;
+       margin-right: 32px;
+     }
+     div.top b.caution {font-size: 16px;}
+     div.content {
+       margin-left: 32px;
+       margin-right: 32px;
+     }
+     div.content div.prolog {}
+     div.form form#regform td.left {
+       text-align: right;
+       font-size: 13px;
+       white-space: nowrap;
+       padding-right: 6px;
+     }
+     div.submit {text-align: center;}
+     #regform td.right {}
+     #regform table input:focus, textarea:focus {background: #FF9;}
+     b.asterisk {color: #900;}
+     b.comment {
+       font-size: 12px;
+       color: #030;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <b class="topic">五色土</b>
+      <img class="_of" src="images/_of.jpg">
+      <b class="topic">新用户注册</b>
+      <hr>
+      <b class="caution">欢迎加入本站^_^以下资料请如实填写，带（</b>
+      <b class="asterisk">*</b>
+      <b class="caution">）号的项目为必填内容。</b>
+    </div>
+    <div class="content">
+      <div class="prolog">
+	<ol>
+	  <li>请勿以党和国家领导人或其他名人的真实姓名、字号、艺名、笔名注册；
+	    <li>请勿以国家机构或其他机构的名称注册；
+	      <li>请勿注册和其他网友之名相近、相仿的名字；
+	        <li>请勿注册不文明、不健康之代号；
+	          <li>请勿注册易产生歧义、引起他人误解之代号；
+	</ol>
+      </div>
+      <div class="form">
+	<form id="regform" method="post" action="bbsdoreg">
+	  <table cellspacing="0">
+	    <tbody>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请输入帐号：</b></td>
+		<td class="right">
+		  <input name="userid" size="12" maxlength="12"
+			 onBlur=show(document.regform.userid.value);return false>
+		  <b class="comment">（3-12字符，必须全为英文字母或标准汉字。帐号是您的BBS登录凭证，申请后无法再行修改。）</b></td></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请输入密码：</b></td>
+		<td class="right">
+		  <input type="password" name="pass1" size="31" maxlength="31">
+		  <b class="comment">（有效长度31位。请保护好您的密码。）</b></td></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请确认密码：</b></td>
+		<td class="right">
+		  <input type="password" name="pass2" size="31" maxlength="31">
+		  <b class="comment">（有效长度31位。）</b></td></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请输入昵称：</b></td>
+		<td class="right">
+		  <input name="username" size="20" maxlength="39">
+		  <b class="comment">（2-30字符，中英文不限。登陆后可自行修改，类似心情短语。）</b></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>学校系级或者公司单位：</b></td>
+		<td class="right">
+		  <input name="address" size="40">
+		  <b class="comment">（至少8个汉字，学校系级请具体到班级，单位请具体到部门。例：系级：中国农大xx学院xx专业xx班；单位：中国农大校团委宣传部。）</b></tr>
+	      <tr class="optional">
+		<td class="left">
+		  <b>E-mail地址（可选）：</b></td>
+		<td class="right">
+		  <input name="email" size="40"></td></tr>
+	      <tr class="optional">
+		<td class="left">
+		  <b>联络电话（可选）：</b></td>
+		<td class="right">
+		  <input name="phone" size="40" ></td></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请输入您的真实姓名：</b></td>
+		<td class="right">
+		  <input name="realname" size="20">
+		  <b class="comment">（请用中文, 至少2个汉字）</b></td></tr>
+	      <tr class="optional">
+		<td class="left">
+		  <b>上站留言(可选)：</b></td>
+		<td class="right">
+		  <textarea name="words" rows="3" cols="40" wrap="virutal"></textarea></tr>
+	      <tr class="required">
+		<td class="left">
+		  <input type="button" name=g value="请先填写代号"
+			 disabled=true
+			 onClick=show(document.regform.userid.value);
+			 return false><br></td>
+		  <td class="right">
+		    <img src="/cgi-bin/regimage" name="myImage"></td></tr>
+	      <tr class="required">
+		<td class="left">
+		  <b class="asterisk">*</b>
+		  <b>请输入上面的数字：</b></td>
+		<td class="right">
+		  <input name="regpass" size="10" maxlength="10">
+		  <b class="comment">如果显示为红x，请重新填写一遍帐号和密码，即可出现。</b></tr>
+	    </tbody>
+	  </table>
+	  <hr>
+	  <div class="submit">
+	    <input type="button" value="提交表格"
+		   onclick="this.value='注册单提交中，请稍候...';
+			    this.disabled=true;
+			    regform.submit();" >
+	    <input type="reset" value="重新填写">
+	    <input type="button" value="查看帮助"
+		   onclick="javascript:{
+			    open('/reghelp.html','winreghelp',
+			    'width=600,height=460,resizeable=yes,scrollbars=yes');
+			    return false;}">
+	  </div>
+	</form>
+      </div>
+    </div>
+  </body>
+</html>
